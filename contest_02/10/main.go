@@ -1,3 +1,6 @@
+package main
+import "fmt"
+
 // Функция shift сдвигает элементы среза data на указанное количество шагов steps.
 func shift(data []int, steps int) {
     length := len(data)
@@ -29,4 +32,19 @@ func shift(data []int, steps int) {
 
     // Копируем сдвинутые данные обратно в исходный срез data
     copy(data, new_data)
+}
+
+func main(){
+    var steps int
+    fmt.Scan(&steps)
+
+    var data [10]int
+    for index := range data{
+        fmt.Scan(&data[index])
+    }
+
+    shift(data[:], steps);
+    for _, value := range data{
+        fmt.Printf("%d ", value)
+    }
 }
