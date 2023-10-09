@@ -1,3 +1,4 @@
+#include <iostream>
 #include <cmath>
 
 bool is_prime(int n) {
@@ -19,4 +20,10 @@ bool is_prime(int n) {
   }
 
   return true;
+}
+
+int main(){
+    int number;
+    std::cin >> number;
+    std::cout << (is_prime(number) ? "YES" : "NO") << std::endl;
 }
